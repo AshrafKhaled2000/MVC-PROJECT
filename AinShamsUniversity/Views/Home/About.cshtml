@@ -1,0 +1,30 @@
+﻿@model IEnumerable<AinShamsUniversity.ViewModels.EnrollmentDateGroup>
+
+@{
+    ViewBag.Title = "Student Body Statistics";
+}
+
+<h2>Student Body Statistics</h2>
+
+<table class="table table-striped table-hover">
+    <tr>
+        <th>
+            Start Date
+        </th>
+        <th>
+            Students
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnrollmentDate)
+            </td>
+            <td>
+                @item.StudentCount 
+            </td>
+        </tr>
+    }
+</table>
